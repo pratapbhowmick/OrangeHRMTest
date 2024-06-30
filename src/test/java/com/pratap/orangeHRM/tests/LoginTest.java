@@ -1,7 +1,5 @@
 package com.pratap.orangeHRM.tests;
 
-import static org.testng.Assert.assertEquals;
-
 import java.util.Iterator;
 import java.util.List;
 
@@ -9,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.pratap.orangeHRM.base.BaseTest;
 import com.pratap.orangeHRM.pages.HomePage;
 import com.pratap.orangeHRM.pages.LoginPage;
@@ -24,17 +23,20 @@ public class LoginTest extends BaseTest{
 	}
 	
 	@Test(dataProvider = "loginTestData")
-	public void testLogin(String username,String password,String expLogin) {
+	public void testLogin(String username,String password,String expLogin) throws InterruptedException {
 		LoginPage loginPage=new LoginPage(driver, test);
 		loginPage.enterUsername(username);
 		loginPage.enterPassword(password);
 		loginPage.clickLoginButton();
 		
-		
+		Thread.sleep(2000);
 		if (expLogin.equalsIgnoreCase("pass")) {
 			HomePage homePage=new HomePage(driver, test);
+			//test.info("Verify for HomePage").addScreenCaptureFromPath(captureScreenshot("Verify For HomePage"));
+			test.info("Verify For HomePage",MediaEntityBuilder.createScreenCaptureFromBase64String(captureScreenshot(), "Homepage").build());
 			Assert.assertTrue(homePage.homePageExist());
 		} else {
+			test.info("Verify for LoginPage",MediaEntityBuilder.createScreenCaptureFromBase64String(captureScreenshot(), "LoginPage").build());
 			Assert.assertTrue( loginPage.loginButton.isDisplayed());			
 		}
 		

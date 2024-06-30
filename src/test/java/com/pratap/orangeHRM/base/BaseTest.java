@@ -1,7 +1,12 @@
 package com.pratap.orangeHRM.base;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Duration;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -30,6 +35,15 @@ public class BaseTest {
 		
 		extent = ExtentManager.getInstance();
 		test = extent.createTest(getClass().getSimpleName());
+		File screenshotDir=new File(System.getProperty("user.dir")+"/screenshots/");
+		if (!screenshotDir.exists()) {
+			screenshotDir.mkdir();
+		}
+		File extentReportsDir=new File(System.getProperty("user.dir")+"/ExtentReports/");
+		if (!extentReportsDir.exists()) {
+			extentReportsDir.mkdir();
+		}
+		
 	}
 	@AfterMethod
 	public void tearDown(ITestResult result) {
@@ -45,5 +59,24 @@ public class BaseTest {
 			driver.quit();
 		}
 		extent.flush();
+	}
+	public String captureScreenshot(String actionName){
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File src=ts.getScreenshotAs(OutputType.FILE);
+		String dest=System.getProperty("user.dir")+"/screenshots/"+actionName+" - "+System.currentTimeMillis()+".png";
+		
+		try {
+			Files.copy(src.toPath(), Paths.get(dest));
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			test.info(e.getMessage());
+		}
+		return dest;
+	}
+	public String captureScreenshot(){
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		String base64code=ts.getScreenshotAs(OutputType.BASE64);		
+		return base64code;
 	}
 }

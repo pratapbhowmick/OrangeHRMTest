@@ -29,7 +29,7 @@ public class ExtentManager {
 		if (extent==null) {
 			String timeStamp = DateTimeFormatter.ofPattern("yyyy-MM-dd HH.mm.ss").format(LocalDateTime.now());  
 			  
-			extent=createInstance(timeStamp+" Extent.html");
+			extent=createInstance(System.getProperty("user.dir")+"/ExtentReports/"+timeStamp+" Extent.html");
 		} 
 		return extent;
 	}
