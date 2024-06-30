@@ -1,7 +1,5 @@
 package com.pratap.orangeHRM.utils;
 
-import java.security.Timestamp;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
