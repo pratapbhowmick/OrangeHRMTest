@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-30T16:52:17 IST" name="Suite" finished-at="2024-06-30T16:52:51 IST" duration-ms="33950">
+    <groups>
+    </groups>
+    <test started-at="2024-06-30T16:52:17 IST" name="Test" finished-at="2024-06-30T16:52:51 IST" duration-ms="33950">
+      <class name="com.pratap.orangeHRM.tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:19 IST" name="setUp" finished-at="2024-06-30T16:52:26 IST" duration-ms="7203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:26 IST" name="testLogin" data-provider="loginTestData" finished-at="2024-06-30T16:52:28 IST" duration-ms="1761" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[pass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:28 IST" name="tearDown" finished-at="2024-06-30T16:52:29 IST" duration-ms="891" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:29 IST" name="setUp" finished-at="2024-06-30T16:52:33 IST" duration-ms="4533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:33 IST" name="testLogin" data-provider="loginTestData" finished-at="2024-06-30T16:52:35 IST" duration-ms="1972" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admddien]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[adesmin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fail]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:35 IST" name="tearDown" finished-at="2024-06-30T16:52:35 IST" duration-ms="178" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:35 IST" name="setUp" finished-at="2024-06-30T16:52:39 IST" duration-ms="4060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:39 IST" name="testLogin" data-provider="loginTestData" finished-at="2024-06-30T16:52:42 IST" duration-ms="2213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[pass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:42 IST" name="tearDown" finished-at="2024-06-30T16:52:42 IST" duration-ms="203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:42 IST" name="setUp" finished-at="2024-06-30T16:52:49 IST" duration-ms="6876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:49 IST" name="testLogin" data-provider="loginTestData" finished-at="2024-06-30T16:52:51 IST" duration-ms="2265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admien]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ademin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fail]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86]" started-at="2024-06-30T16:52:51 IST" name="tearDown" finished-at="2024-06-30T16:52:51 IST" duration-ms="320" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.pratap.orangeHRM.tests.LoginTest@7133da86] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.pratap.orangeHRM.tests.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
