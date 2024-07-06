@@ -33,10 +33,12 @@ public class LoginTest extends BaseTest{
 		if (expLogin.equalsIgnoreCase("pass")) {
 			HomePage homePage=new HomePage(driver, test);
 			//test.info("Verify for HomePage").addScreenCaptureFromPath(captureScreenshot("Verify For HomePage"));
-			test.info("Verify For HomePage",MediaEntityBuilder.createScreenCaptureFromBase64String(captureScreenshot(), "Homepage").build());
+			test.info("Verify For HomePage");
+			addScreenshot("Verify For HomePage","Homepage");
 			Assert.assertTrue(homePage.homePageExist());
 		} else {
-			test.info("Verify for LoginPage",MediaEntityBuilder.createScreenCaptureFromBase64String(captureScreenshot(), "LoginPage").build());
+			test.info("Verify for LoginPage");
+			addScreenshot("Verify for LoginPage","LoginPage");
 			Assert.assertTrue( loginPage.loginButton.isDisplayed());			
 		}
 		

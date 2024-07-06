@@ -104,7 +104,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.pratap.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(Admien, ademin123, fail)">testLogin(Admien, ademin123, fail)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.pratap.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(Admin, admin123, pass)">testLogin(Admin, admin123, pass)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.pratap.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(Admin, admin123, pass)">testLogin(Admin, admin123, pass)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -114,12 +119,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.pratap.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(Admin, admin123, pass)">testLogin(Admin, admin123, pass)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.pratap.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(Admin, admin123, pass)">testLogin(Admin, admin123, pass)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.pratap.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(Admien, ademin123, fail)">testLogin(Admien, ademin123, fail)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -142,10 +142,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin(Admien, ademin123, fail)">
-                  </a> <!-- testLogin(Admien, ademin123, fail) -->
+                  <a name="testLogin(Admin, admin123, pass)">
+                  </a> <!-- testLogin(Admin, admin123, pass) -->
                   <span class="method-name">testLogin</span>
-                  <span class="parameters">(Admien, ademin123, fail)</span>
+                  <span class="parameters">(Admin, admin123, pass)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin(Admin, admin123, pass)">
+                  </a> <!-- testLogin(Admin, admin123, pass) -->
+                  <span class="method-name">testLogin</span>
+                  <span class="parameters">(Admin, admin123, pass)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -158,18 +166,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin(Admin, admin123, pass)">
-                  </a> <!-- testLogin(Admin, admin123, pass) -->
+                  <a name="testLogin(Admien, ademin123, fail)">
+                  </a> <!-- testLogin(Admien, ademin123, fail) -->
                   <span class="method-name">testLogin</span>
-                  <span class="parameters">(Admin, admin123, pass)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLogin(Admin, admin123, pass)">
-                  </a> <!-- testLogin(Admin, admin123, pass) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(Admin, admin123, pass)</span>
+                  <span class="parameters">(Admien, ademin123, fail)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,6 +185,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.pratap.orangeHRM.tests.LoginTest&quot;/&gt;
     &lt;/classes&gt;
@@ -230,24 +231,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLogin')
 data.setCell(0, 2, 'com.pratap.orangeHRM.tests.LoginTest')
-data.setCell(0, 3, 5427);
+data.setCell(0, 3, 5982);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testLogin')
 data.setCell(1, 2, 'com.pratap.orangeHRM.tests.LoginTest')
-data.setCell(1, 3, 3487);
+data.setCell(1, 3, 4925);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testLogin')
 data.setCell(2, 2, 'com.pratap.orangeHRM.tests.LoginTest')
-data.setCell(2, 3, 3484);
+data.setCell(2, 3, 4826);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testLogin')
 data.setCell(3, 2, 'com.pratap.orangeHRM.tests.LoginTest')
-data.setCell(3, 3, 3479);
+data.setCell(3, 3, 4579);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -275,52 +276,52 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.pratap.orangeHRM.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp</span>
+                <span class="method-name">setUp(edge, org.testng.TestRunner@7aa01bd9)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogin(Admin, admin123, pass)</span>
-                <span class="method-start">9750 ms</span>
+                <span class="method-start">8701 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin(java.lang.String,java.lang.Stri...)</span>
-                <span class="method-start">13237 ms</span>
+                <span class="method-start">13280 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">13676 ms</span>
+                <span class="method-name">setUp(edge, org.testng.TestRunner@7aa01bd9)</span>
+                <span class="method-start">15155 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogin(Admddien, adesmin123, fail)</span>
-                <span class="method-start">23366 ms</span>
+                <span class="method-start">19294 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin(java.lang.String,java.lang.Stri...)</span>
-                <span class="method-start">28793 ms</span>
+                <span class="method-start">24120 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">29051 ms</span>
+                <span class="method-name">setUp(edge, org.testng.TestRunner@7aa01bd9)</span>
+                <span class="method-start">25526 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogin(Admin, admin123, pass)</span>
-                <span class="method-start">36454 ms</span>
+                <span class="method-start">29669 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin(java.lang.String,java.lang.Stri...)</span>
-                <span class="method-start">39938 ms</span>
+                <span class="method-start">35651 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">40136 ms</span>
+                <span class="method-name">setUp(edge, org.testng.TestRunner@7aa01bd9)</span>
+                <span class="method-start">36995 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogin(Admien, ademin123, fail)</span>
-                <span class="method-start">46761 ms</span>
+                <span class="method-start">41891 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testLogin status=SUCCESS method=LoginTest.testLogin(java.lang.String,java.lang.Stri...)</span>
-                <span class="method-start">50241 ms</span>
+                <span class="method-start">46817 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
