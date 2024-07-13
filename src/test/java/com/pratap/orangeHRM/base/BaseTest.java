@@ -21,6 +21,7 @@ import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.pratap.orangeHRM.pages.LoginPage;
 import com.pratap.orangeHRM.utils.ExtentManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -89,6 +90,18 @@ public class BaseTest {
 		}
 		extent.flush();
 	}
+	
+	
+	public void login(String username,String password) {
+		LoginPage loginPage=new LoginPage(driver, test);
+		loginPage.enterUsername(username);
+		loginPage.enterPassword(password);
+		loginPage.clickLoginButton();
+	}
+	
+	public void waitForSecond(int sec) throws InterruptedException {
+		Thread.sleep(sec*1000);
+	}
 	public void addScreenshot(String actionName) {
 		
 		if ("Base64".equalsIgnoreCase(configReader.getProperty("ScreenshotType"))) {
@@ -108,7 +121,8 @@ public class BaseTest {
 	private String captureScreenshot(String actionName){
 		TakesScreenshot ts=(TakesScreenshot) driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
-		String dest=ExtentManager.getReportDir()+"/screenshots/"+actionName+" - "+System.currentTimeMillis()+".png";
+		String relativePath="/screenshots/"+actionName+" - "+System.currentTimeMillis()+".png";
+		String dest=ExtentManager.getReportDir()+relativePath;
 		
 		try {
 			Files.copy(src.toPath(), Paths.get(dest));
@@ -117,7 +131,7 @@ public class BaseTest {
 			e.printStackTrace();
 			test.info(e.getMessage());
 		}
-		return dest;
+		return "."+relativePath;
 	}
 	private String captureBase64Screenshot(){
 		TakesScreenshot ts=(TakesScreenshot) driver;

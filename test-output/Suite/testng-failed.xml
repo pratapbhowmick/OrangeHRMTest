@@ -4,13 +4,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.pratap.orangeHRM.tests.LoginTest">
+      <class name="com.pratap.orangeHRM.tests.HomepageLeftPanelNavigationTest">
         <methods>
-          <include name="testLogin"/>
+          <include name="testHomePageLeftPanel" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.pratap.orangeHRM.tests.LoginTest -->
+      </class> <!-- com.pratap.orangeHRM.tests.HomepageLeftPanelNavigationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

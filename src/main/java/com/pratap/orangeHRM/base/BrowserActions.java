@@ -14,7 +14,6 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.pratap.orangeHRM.utils.ExtentManager;
 
 public class BrowserActions{
-	;
 	private WebDriver driver;
 	private ExtentTest test;
 	private String screenshotType;
@@ -86,7 +85,8 @@ public class BrowserActions{
 	public String captureScreenshot(String actionName){
 		TakesScreenshot ts=(TakesScreenshot) driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
-		String dest=ExtentManager.getReportDir()+"/screenshots/"+actionName+" - "+System.currentTimeMillis()+".png";
+		String relativePath="/screenshots/"+actionName+" - "+System.currentTimeMillis()+".png";
+		String dest=ExtentManager.getReportDir()+relativePath;
 		
 		try {
 			Files.copy(src.toPath(), Paths.get(dest));
@@ -95,7 +95,7 @@ public class BrowserActions{
 			e.printStackTrace();
 			test.info(e.getMessage());
 		}
-		return dest;
+		return "."+relativePath;
 	}
 	public String captureBase64Screenshot(){
 		TakesScreenshot ts=(TakesScreenshot) driver;

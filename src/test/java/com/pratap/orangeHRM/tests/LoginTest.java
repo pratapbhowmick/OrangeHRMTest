@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.pratap.orangeHRM.base.BaseTest;
+import com.pratap.orangeHRM.base.BrowserActions;
 import com.pratap.orangeHRM.pages.HomePage;
 import com.pratap.orangeHRM.pages.LoginPage;
 import com.pratap.orangeHRM.utils.ExcelUtils;
@@ -36,6 +37,7 @@ public class LoginTest extends BaseTest{
 			test.info("Verify For HomePage");
 			addScreenshot("Verify For HomePage","Homepage");
 			Assert.assertTrue(homePage.homePageExist());
+			
 		} else {
 			test.info("Verify for LoginPage");
 			addScreenshot("Verify for LoginPage","LoginPage");
