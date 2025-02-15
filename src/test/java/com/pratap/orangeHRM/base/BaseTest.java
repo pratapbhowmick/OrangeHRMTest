@@ -78,6 +78,7 @@ public class BaseTest {
 	@AfterMethod
 	public void tearDown(ITestResult result) {
 		if (result.getStatus()==ITestResult.FAILURE) {
+
 			test.fail(result.getThrowable());
 		} else if(result.getStatus()==ITestResult.SUCCESS) {
 			test.pass("Test Passed");

@@ -3,6 +3,7 @@ package com.pratap.orangeHRM.tests;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -34,21 +35,39 @@ public class HomepageLeftPanelNavigationTest extends BaseTest{
 			
 			) throws InterruptedException {
 		login(username, password);
-		Thread.sleep(2000);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		HomePage homePage=new HomePage(driver, test);
 		SoftAssert sa=new SoftAssert();
 		BrowserActions actions=new BrowserActions(driver, test);
 		if (!panel1.equals("")) {
 			actions.click(driver.findElement(HomePage.Admin));
 			
-			waitForSecond(3);
+			try {
+				waitForSecond(3);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			String actTitle=homePage.getTopBarHeaderTitle();
 			addScreenshot(panel1);
-			sa.assertTrue(actTitle.toUpperCase().contains(panel1.toUpperCase()));
+			
+			sa.assertTrue(actTitle.toUpperCase().contains(panel1.toUpperCase()),"Admin Toolbar Title Verification");
+			
+			
 		}
 		if (!panel2.equals("")) {
 			actions.click(driver.findElement(HomePage.PIM));
-			waitForSecond(3);
+			try {
+				waitForSecond(3);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			String actTitle=homePage.getTopBarHeaderTitle();
 			addScreenshot(panel2);
 			sa.assertTrue(actTitle.toUpperCase().contains(panel2.toUpperCase()));
@@ -123,8 +142,11 @@ public class HomepageLeftPanelNavigationTest extends BaseTest{
 			addScreenshot(panel12);
 			sa.assertTrue(actTitle.toUpperCase().contains(panel12.toUpperCase()));
 		}
+		
 		sa.assertAll();
 		
-	
+			
+
 	}
+	
 }
